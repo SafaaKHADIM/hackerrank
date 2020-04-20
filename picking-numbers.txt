@@ -1,0 +1,67 @@
+public static int pickingNumbers(List<Integer> a) {
+    // Write your code here
+    //ArrayList<Integer> sortedlist = new ArrayList<Integer>(Arrays.asList(a));
+    Collections.sort(a);
+    int count=1;
+    int max =1;
+    for (int i=0; i<a.size();i++){
+        int cont=1;
+        for (int j=i+1; j<a.size();j++){
+            
+            if(a.get(j)-a.get(i)>1){
+                count++;
+                //i=j;
+                break;
+            }
+            if(a.get(j)-a.get(i)<2){
+                cont++;
+                
+            }
+
+        }
+        if(max<cont){
+            max=cont;
+        }
+    }
+    return max;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int count =0;
+    
+    //add condition if not null
+    
+    int size1 = picture.get(0).length();
+    
+    for (int i =0; i < picture.size();i++){
+        for(int j=0; j<size1 ; j++){
+            if(picture.get(i).charAt(i+j)==picture.get(i).charAt(j+i)){
+                count=count;
+            }
+            if(picture.get(i).charAt(i+j)==picture.get(i+j).charAt(j)){
+                count=count;
+            }
+            else{
+                count++;
+            }
+        }
+        
+    }
+    return count;
